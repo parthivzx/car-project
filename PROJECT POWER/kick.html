@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Details</title>
+    <style>
+        body {
+            background-color: url(img/download.jpeg);
+            font-family: Arial, sans-serif;
+            color: #ecf0f1;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .typing-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 20px solid #ecf0f1;
+            padding: 50px;
+            border-radius: 30px;
+            background-color: #60c5be;
+        }
+        .typing-input input {
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="typing-input">
+            <h2>Enter Your Details <br>For Booking</h2>
+            <input type="text" id="firstNameInput" placeholder="First Name">
+            <input type="text" id="lastNameInput" placeholder="Last Name">
+            <input type="text" id="emailInput" placeholder="Email">
+            <input type="text" id="phoneInput" placeholder="Phone">
+            <input type="text" id="fromdateInput" placeholder="From Date">
+            <input type="text" id="returndateInput" placeholder="Return Date">
+            <button id="submitButton"><a href="pop.html">Submit</a></button>
+        </div>
+    </div>
+    <script>
+        const firstName = document.getElementById('firstNameInput');
+        const lastName = document.getElementById('lastNameInput');
+        const email = document.getElementById('emailInput');
+        const phone = document.getElementById('phoneInput');
+        const fromdate = document.getElementById('fromdatInput')
+        const returndateInput = document.getElementById('returndateInput');
+        function saveTypingDetails() {
+            console.log("First Name:", firstName.value);
+            console.log("Last Name:", lastName.value);
+            console.log("Email:", email.value);
+            console.log("Phone:", phone.value);
+        }
+
+        document.getElementById('submitButton').addEventListener('click', saveTypingDetails);
+    </script>
+</body>
+</html>
